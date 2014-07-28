@@ -14,4 +14,10 @@ public class SavingAccount {
 		balance -= amount;
 	}
 
+	public SavingAccount nextYear(int interestRate) {
+		SavingAccount account = new SavingAccount();
+		account.deposit(balance() + (balance()*interestRate/100));
+		return  account;
+	}
+
 }

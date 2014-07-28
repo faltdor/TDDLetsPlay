@@ -20,5 +20,15 @@ public class _SavingAccountTest {
 		account.withdrow(75);
 		assertEquals(-75, account.balance());
 	}
+	
+	@Test
+	public void nextYear(){
+		SavingAccount account =  new SavingAccount();
+		account.deposit(10000);
+		SavingAccount nextYear = account.nextYear(10);
+		assertEquals(11000, nextYear.balance());
+		
+	}
+	
 
 }
